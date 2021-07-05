@@ -164,7 +164,35 @@ print(sorted(lst_to_sort))
 print(sorted(lst_to_sort, reverse=True))
 
 # 22. Use map and lambda to update the lst_to_sort by multiply each element by 2
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+new_lst_to_sort = list(map(lambda x: x * 2, lst_to_sort))
+print(new_lst_to_sort)
 
+# 23*. Raise each list number to the corresponding number on another list:
+list_A = [2, 3, 4]
+list_B = [5, 6, 7]
 
+new_list_a = list(map(lambda x: x + 3, list_A))
+print(new_list_a)
 
+# 24. Use reduce and lambda to compute the numbers of a lst_to_sort.
+from functools import reduce
+sum_lst_to_sort = reduce(lambda x, y: x + y, lst_to_sort)
+print(sum_lst_to_sort)
+
+# 25. Use filter and lambda to filter the number of a lst_to_sort with elem % 2 == 1
+new_list_filter = list(filter(lambda x: (x % 2 == 1), lst_to_sort))
+print(new_list_filter)
+
+# 26. Considering the range of values: b = range(-10, 10), use the function filter to return only negative numbers.
+b = range(-10, 10)
+negative_list = list(filter(lambda x: (x < 0), b))
+print(negative_list)
+
+# 27*. Using the filter function, find the values that are common to the two lists:
+list_1 = [1,2,3,5,7,9]
+list_2 = [2,3,5,6,7,8]
+
+some_numbers = list(filter(lambda x: list_2.count(x) > 0, list_1))
+print(some_numbers)
 
